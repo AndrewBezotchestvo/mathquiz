@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,7 @@ namespace ConsoleApp1
         {
             int score = 0;
             int record = 0;
+            int lifes = 3;
             float a = 0;
             float b = 0;
 
@@ -43,8 +45,17 @@ namespace ConsoleApp1
                 else
                 {
                     Console.WriteLine($"Не правильно, ваш счет {score}");
+                    lifes--;
                 }
+                if (lifes <= 0)
+                {
+                    Console.WriteLine("Игра закончена!");
+                    break;
+                }
+
+
             }
+            Console.WriteLine($"Вы проиграли ваш счет:{score}");
         }
     }
 }
