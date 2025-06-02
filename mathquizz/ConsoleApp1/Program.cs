@@ -12,6 +12,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             int score = 0;
+            int hp = 3;
             int record = 0;
             int lifes = 3;
             float a = 0;
@@ -45,6 +46,7 @@ namespace ConsoleApp1
                 else
                 {
                     Console.WriteLine($"Не правильно, ваш счет {score}");
+<<<<<<< HEAD
                     lifes--;
                 }
                 if (lifes <= 0)
@@ -56,6 +58,22 @@ namespace ConsoleApp1
 
             }
             Console.WriteLine($"Вы проиграли ваш счет:{score}");
+=======
+                    hp--;
+                }
+                if (hp == 0)
+                {
+                    Console.WriteLine("Тебя схавала Математичка");
+                    break
+                    ;
+
+
+                }
+                
+            }
+            Console.WriteLine(score);
+            Console.WriteLine("THE END");
+>>>>>>> 7d8da5458c68b89911216a7a79057009a71c8d7d
         }
     }
 }
